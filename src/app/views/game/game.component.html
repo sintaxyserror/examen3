@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="div">
+        <h1 (click)="resetGame()">{{ title }}</h1>
+
+        <table *ngIf="!gameOver" style="margin-left:auto; margin-right:auto;">
+            <tr *ngFor="let row of getBoardRows()">
+                <td *ngFor="let cell of row; let i = index" class="activity" (click)="handleClick(board.indexOf(cell))">
+                    <span *ngIf="showNumbers || userSequence.includes(cell)">{{ cell }}</span>
+                </td>
+            </tr>
+        </table>
+        <h1 *ngIf="gameOver">{{ title }}</h1>
+        <button *ngIf="gameOver" (click)="resetGame()">Play Again</button>
+    </div>
+</div>
+
+<style>
+    td {
+        text-align: center;
+        vertical-align: middle;
+    }
+</style>

@@ -1,0 +1,93 @@
+<div class="journal">
+    <div class="first photo">
+        <div>
+            @if(counter === 0){
+            <div class="image-container2">
+                <img *ngFor="let image of images" [src]="image.url" [id]="image.id" (click)="updateCounter(image.id)" />
+            </div>
+            <span class="caption">Memoria</span>
+            }
+            @else if (counter === 1) {
+            <div class="image-container2" (click)="changeImage()" (click)="clearText()">
+                <img *ngFor="let image of getFilterdImage()" [src]="image.url" [id]="image.id" (click)="updateCounter(image.id)"  />
+            </div>
+            
+            <span class="caption">Memoria a corto plazo</span>
+            }@else if (counter === 2) {
+            <div class="image-container2" (click)="changeImage()">
+                <img *ngFor="let image of getFilterdImage()" [src]="image.url" [id]="image.id" (click)="updateCounter(image.id)" />
+            </div>
+            <span class="caption">Memoria a largo plazo</span>
+            }@else if (counter === 3) {
+            <div class="image-container2" (click)="changeImage()">
+                <img *ngFor="let image of getFilterdImage()" [src]="image.url" [id]="image.id" (click)="updateCounter(image.id)" />
+            </div>
+            <span class="caption">Memoria</span>
+            }@else if (counter === 4) {
+            <div class="image-container2" (click)="changeImage()">
+                <img *ngFor="let image of getFilterdImage()" [src]="image.url" [id]="image.id" (click)="updateCounter(image.id)" />
+            </div>
+            <span class="caption">Memoria declarativa</span>
+            }@else if (counter === 5) {
+            <div class="image-container2" (click)="changeImage()">
+                <img *ngFor="let image of getFilterdImage()" [src]="image.url" [id]="image.id" (click)="updateCounter(image.id)" />
+            </div>
+            <span class="caption">Memoria procedimental</span>
+            }@else if (counter === 6) {
+            <div class="image-container2" (click)="changeImage()">
+                <img *ngFor="let image of getFilterdImage()" [src]="image.url" [id]="image.id" (click)="updateCounter(image.id)" />
+            </div>
+            <span class="caption">Memoria visual</span>
+            }
+        </div>
+    </div>
+
+
+    @if(counter === 0){
+    <div class="text-container">
+        <span class="quote">¿Qué es la memoria?</span>
+        <span class="first-letter">C</span>
+        <p *ngFor="let paragraph of getFilteredParagraphs()" [innerHTML]="paragraph.text"></p>
+    </div>
+    }
+    @else if(counter === 1){
+    <div class="text-container" >
+        <span class="quote">Memoria a corto plazo</span>
+        <span class="first-letter">1</span>
+        <p *ngFor="let paragraph of getFilteredParagraphs()" [innerHTML]="paragraph.text" ></p>
+    </div>
+    }
+    @else if(counter === 2){
+    <div class="text-container">
+        <span class="quote">Memoria a largo plazo</span>
+        <span class="first-letter">2</span>
+        <p *ngFor="let paragraph of getFilteredParagraphs()" [innerHTML]="paragraph.text"></p>
+    </div>
+    } @else if(counter === 3){
+    <div class="text-container">
+        <span class="quote">Memoria declarativa</span>
+        <span class="first-letter">3</span>
+        <p *ngFor="let paragraph of getFilteredParagraphs()" [innerHTML]="paragraph.text"></p>
+    </div>
+    } @else if(counter === 4){
+    <div class="text-container">
+        <span class="quote">Memoria procedimental</span>
+        <span class="first-letter">4</span>
+        <p *ngFor="let paragraph of getFilteredParagraphs()" [innerHTML]="paragraph.text"></p>
+    </div>
+    } @else if(counter === 5){
+    <div class="text-container">
+        <span class="quote">Memoria sensorial</span>
+        <span class="first-letter">5</span>
+        <p *ngFor="let paragraph of getFilteredParagraphs()" [innerHTML]="paragraph.text"></p>
+    </div>
+    } @else if(counter === 6){
+    <div class="text-container">
+        <span class="quote">Memoria visual</span>
+        <span class="first-letter">6</span>
+        <p *ngFor="let paragraph of getFilteredParagraphs()" [innerHTML]="paragraph.text"></p>
+    </div>
+    
+    }
+</div>
+

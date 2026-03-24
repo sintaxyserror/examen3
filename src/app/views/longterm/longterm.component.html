@@ -1,0 +1,19 @@
+<div class="journal">
+  <div class="first photo">
+    <div>
+      <div class="image-container">
+        <img [src]="getCurrentImage().url" alt="Imagen de memoria a largo plazo">
+      </div>
+    </div>
+    <span class="caption">Memoria a largo plazo</span>
+  </div>
+  <div>
+    <div>
+      <span class="quote">¿Qué es la memoria a largo plazo?</span>
+      <p>
+        <span class="first-letter">{{getcurrentLetter().text}}</span>
+        {{ getCurrentParagraph().text }}
+      </p>
+    </div>
+  </div>
+</div>

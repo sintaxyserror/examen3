@@ -1,0 +1,39 @@
+<div class="journal">
+    <div class="first photo">
+        <div>
+            <div style="height: 500px">
+                <div style="float: left; clear: none; position: absolute; top: 100%;">
+                    <button (click)="previous()">Previous</button>
+                    <button (click)="next()">Next</button>
+                </div>
+                <div *ngIf="currentIndex === 0" style="display: flex; justify-content: left; align-items: center;">
+                    <h1 id="box-four">{{ getCurrentText() }}</h1>
+                    <div id="box-zero">
+                        <div *ngFor="let image of getCurrentImages(); let i = index" [id]="'box-' + i" class="image-box" 
+                            [style.backgroundImage]="'url(' + image.url + ')'">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div *ngIf="currentIndex === 1" style="display: flex; justify-content: left; align-items: center;">
+                    <h1 id="box-four">{{ getCurrentText() }}</h1>
+                    <div id="box-zero">
+                        <div *ngFor="let image of getCurrentImages(); let i = index" [id]="'box-' + i" class="image-box" 
+                            [style.backgroundImage]="'url(' + image.url + ')'">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div *ngIf="currentIndex === 2" style="display: flex; justify-content: left; align-items: center;">
+                    <h1 id="box-four">{{ getCurrentText() }}</h1>
+                    <div id="box-zero">
+                        <div *ngFor="let image of getCurrentImages(); let i = index" [id]="'box-' + i" class="image-box" 
+                            [style.backgroundImage]="'url(' + image.url + ')'">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

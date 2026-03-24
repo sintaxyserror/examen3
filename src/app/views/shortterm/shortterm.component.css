@@ -25,13 +25,26 @@
     text-align: center;
   }
   
-  .buttons {
+  .image-box {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: all 2s ease;
+  }
+
+  #box-zero {
     display: flex;
-    gap: 10px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-  }
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+.image-box {
+    width: 200px; 
+    height: 200px; 
+    background-size: cover;
+    background-position: center;
+    margin: 5px 0;
+}
