@@ -1,52 +1,93 @@
-# ActividadRepaso
+# Actividad Repaso
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.4.
+Aplicación web desarrollada con Angular 19 que funciona como herramienta interactiva para gestionar y visualizar información en distintos plazos temporales.
 
-## Development server
+## Características
 
-To start a local development server, run:
+- **Interface amigable**: Navegación clara a través de un header y footer consistentes
+- **Múltiples vistas**: Acceso a diferentes secciones según necesidades
+  - Home: Página principal
+  - Longterm: Gestión de objetivos a largo plazo
+  - Shortterm: Seguimiento de tareas corto plazo
+  - Game: Componente interactivo
+- **Arquitectura modular**: Componentes reutilizables y bien organizados
+- **Responsive design**: Adaptado para diferentes dispositivos
 
-```bash
-ng serve
-```
+## Requisitos
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Node.js (versión 18 o superior)
+- npm o yarn
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Instalación
 
 ```bash
-ng generate --help
+# Clonar el repositorio
+git clone https://github.com/sintaxyserror/examen3.git
+cd examen3
+
+# Instalar dependencias
+npm install
 ```
 
-## Building
+## Uso
 
-To build the project run:
+### Desarrollo
+
+Para ejecutar el servidor de desarrollo:
 
 ```bash
-ng build
+npm start
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+La aplicación estará disponible en `http://localhost:4200/`
 
-## Running unit tests
+### Construcción
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Para crear una build optimizada para producción:
 
 ```bash
-ng test
+npm run build
 ```
 
-## Running end-to-end tests
+### Pruebas
 
-For end-to-end (e2e) testing, run:
+Ejecutar los tests:
+
+```bash
+npm test
+```
+
+## Estructura del Proyecto
+
+```
+src/
+├── app/
+│   ├── components/
+│   │   ├── banner/
+│   │   ├── footer/
+│   │   └── header/
+│   ├── views/
+│   │   ├── home/
+│   │   ├── longterm/
+│   │   ├── shortterm/
+│   │   └── game/
+│   ├── app.component.ts
+│   ├── app.config.ts
+│   └── app.routes.ts
+├── assets/
+└── styles.css
+```
+
+## Tecnologías
+
+- **Angular**: 19.0.0
+- **TypeScript**: Lenguaje de programación
+- **RxJS**: Manejo reactivo de datos
+- **Angular Router**: Navegación entre vistas
+
+## Licencia
+
+Este proyecto forma parte de una actividad educativa.
 
 ```bash
 ng e2e
